@@ -19,6 +19,7 @@ public class Rules extends JFrame implements ActionListener {
         add(heading);
 
         JLabel rules = new JLabel();
+
         rules.setBounds(20, 50, 790, 380);
         rules.setFont(new Font("Tahoma", Font.PLAIN, 16));
         rules.setText(
@@ -57,10 +58,11 @@ public class Rules extends JFrame implements ActionListener {
     }
 
 
-    public void actionPerformed(ActionEvent ae){
-        if(ae.getSource() == start){
-
-        }else{
+    public void actionPerformed(ActionEvent ae) {
+        if (ae.getSource() == start) {
+            setVisible(false);
+            new Quiz(name);
+        } else {
             setVisible(false);
             new Login();
         }
